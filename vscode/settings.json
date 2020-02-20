@@ -1,0 +1,21 @@
+{
+    "go.buildOnSave": "workspace",
+    "git.confirmSync": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E203,E302"
+    ],
+    "python.formatting.provider": "black",
+    "window.zoomLevel": -2,
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.minimap.enabled": true,
+    "breadcrumbs.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "markdownlint.config": {
+        "default": true,
+        "MD033":false
+    }
+}

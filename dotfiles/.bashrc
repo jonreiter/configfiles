@@ -120,6 +120,8 @@ fi
 export PATH=/usr/local/go/bin:${HOME}/go/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/local/lib
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 if [ -e ${HOME}/.bash_aliases ]; then
 	source ${HOME}/.bash_aliases
 fi

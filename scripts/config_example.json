@@ -1,0 +1,21 @@
+[
+	{
+		"name": "server1",
+		"host": "foo.org",
+		"user": "airflow",
+		"port": 22
+	},
+	{
+		"name": "office-1",
+		"host": "bar.org",
+		"user": "root",
+		"port": 2222
+	},
+	{
+		"name": "office-2",
+		"host": "bar.org",
+		"user": "root",
+		"port": 2223
+	}
+]
+

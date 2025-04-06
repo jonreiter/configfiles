@@ -1,0 +1,7 @@
+#!/bin/bash
+
+VPN_SERVER=xxx
+VPN_PORT=22
+LOCAL_PORT=1234
+
+ssh -D ${LOCAL_PORT} -C -N -p ${VPN_PORT} ${VPN_SERVER}

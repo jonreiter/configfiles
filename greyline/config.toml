@@ -1,0 +1,121 @@
+# Default configuration for greyline.
+# User config at ~/.config/greyline/config.toml is merged over this
+# (top-level keys override; a user [[city]] list replaces this one entirely).
+
+backend = "command"            # auto | sway | swww | hyprpaper | x11 (feh/xwallpaper) | command
+
+# GNOME / KDE / XFCE and other desktops: use backend = "command" and give a shell
+# command that sets the wallpaper to the PNG greyline renders. {path} is the PNG,
+# {output} the output name. This REPLACES the wallpaper (it is not an overlay).
+# See `greyline help desktops` for the current recipes. Examples:
+#   command = 'gsettings set org.gnome.desktop.background picture-uri "" && gsettings set org.gnome.desktop.background picture-uri "file://{path}" && gsettings set org.gnome.desktop.background picture-uri-dark "file://{path}"'  # GNOME
+#   command = 'plasma-apply-wallpaperimage {path}'                                                                        # KDE Plasma
+#   command = 'xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image -s {path}'               # XFCE
+# resolution = "2560x1440"   # optional; size of the single rendered image (else largest xrandr output, else 1920x1080)
+map_style = "vector"        # vector (scalable, themeable) | raster (needs your own map art, see NOTICE)
+# desaturate = false         # grey out the raster map art (map_style = "raster" only)
+theme = "tokyo-night-dark"             # modus | blue, or any bundled base16 port (gruvbox-dark-hard,
+                            # everforest-light-medium, rose-pine, tokyo-night-storm,
+                            # catppuccin-mocha, nord, dracula, …), or your own from
+                            # ~/.config/greyline/themes/. `greyline help themes` lists them.
+format = "24h"              # 24h | 12h
+# font_family = "Aporetic Sans"  # label font: a fontconfig family name or a font-file path (default: Aporetic Sans, then system fonts)
+font_scale = 0.5           # scale all label text (e.g. 1.25 = 25% larger, 0.8 = smaller)
+label_background = false    # draw a plate behind each clock so labels stay readable over the map
+# label_bg_alpha = 130       # 0-255; opacity of that plate (overrides label_background)
+logo = false                 # draw the bottom-left corner logo (bundled default: Tux)
+# logo_path = "/path/to/your/logo.png"   # swap in your own logo (PNG with transparency)
+# logo_invert = false        # recolour a dark logo's near-black pixels to light (for dark logos)
+# logo_color = "#ffffff"     # recolour the whole logo to one flat colour (a silhouette)
+# logo_scale = 1.0           # size the corner logo (e.g. 0.5 = half; square logos like Tux read large)
+# logo_max_height = 0.0      # cap logo height to this fraction of screen height (0 = no cap; e.g. 0.15 for tall logos)
+bar_height = 0              # px reserved at the bottom for a status bar (lifts the logo)
+
+# Override any colour of the selected theme without writing a theme file. Keys and
+# format as in the packaged greyline/themes/*.toml ("#rrggbb" or "#rrggbbaa").
+# [colors]
+# home = "#fabd2f"
+# night_alpha = 20
+command = "gsettings set org.gnome.desktop.background picture-uri \"\" && gsettings set org.gnome.desktop.background picture-uri \"file://{path}\" && gsettings set org.gnome.desktop.background picture-uri-dark \"file://{path}\""
+
+[twilight]
+bands = true               # discrete civil/nautical/astronomical bands
+darkness = "dramatic"        # subtle | medium | dramatic
+
+[home]
+tz = "Asia/Jakarta"                # "auto" = system timezone, or e.g. "Asia/Kuala_Lumpur"
+column_highlight = true
+
+# Each [[city]] takes name/lat/lon/tz. Optional: label_side ("left"/"right"/"above"/
+# "below") nudges that city's label to the chosen side of its dot (it still falls back to
+# avoid overlapping or running off-screen).
+[[city]]
+name = "San Francisco"
+lat = 37.77
+lon = -122.42
+tz = "America/Los_Angeles"
+
+[[city]]
+name = "New York"
+lat = 40.71
+lon = -74.01
+tz = "America/New_York"
+
+[[city]]
+name = "Dubai"
+lat = 25.28
+lon = 55.30
+tz = "Asia/Dubai"
+
+[[city]]
+name = "London"
+lat = 51.51
+lon = -0.13
+tz = "Europe/London"
+
+[[city]]
+name = "Paris"
+lat = 48.85
+lon = 2.35
+tz = "Europe/Paris"
+
+[[city]]
+name = "Bucharest"
+lat = 44.43
+lon = 26.11
+tz = "Europe/Bucharest"
+
+[[city]]
+name = "Hong Kong"
+lat = 22.30
+lon = 114.18
+tz = "Asia/Shanghai"
+
+[[city]]
+name = "Singapore"
+lat = 1.29
+lon = 103.85
+tz = "Asia/Singapore"
+
+[[city]]
+name = "Tokyo"
+lat = 35.68
+lon = 139.69
+tz = "Asia/Tokyo"
+
+[[city]]
+name = "Jakarta"
+lat = -6.21
+lon = 106.85
+tz = "Asia/Jakarta"
+
+[[city]]
+name = "Sydney"
+lat = -33.87
+lon = 151.21
+tz = "Australia/Sydney"
+[[city]]
+name = "Da Nang"
+lat = 16.07
+lon = 108.22
+tz = "Asia/Jakarta"

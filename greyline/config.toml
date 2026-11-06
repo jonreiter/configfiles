@@ -36,7 +36,7 @@ bar_height = 0              # px reserved at the bottom for a status bar (lifts 
 # [colors]
 # home = "#fabd2f"
 # night_alpha = 20
-command = "gsettings set org.gnome.desktop.background picture-uri \"\" && gsettings set org.gnome.desktop.background picture-uri \"file://{path}\" && gsettings set org.gnome.desktop.background picture-uri-dark \"file://{path}\""
+#command = "gsettings set org.gnome.desktop.background picture-uri \"\" && gsettings set org.gnome.desktop.background picture-uri \"file://{path}\" && gsettings set org.gnome.desktop.background picture-uri-dark \"file://{path}\""
 
 [twilight]
 bands = true               # discrete civil/nautical/astronomical bands
